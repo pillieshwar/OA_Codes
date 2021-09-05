@@ -1,0 +1,24 @@
+How Many Sentenses?
+----------------------------------------------------------------------
+
+from collections import Counter
+
+wordSet = ["listen", "it", "is", "silent"]
+sentence = ["listen it is silent"]
+anagram_map = dict(Counter([tuple(sorted(i)) for i in wordSet]))
+res = []
+
+for sen in sentence:
+  count = 1
+  for w in sen.split(" "):
+    word = tuple(sorted(w))
+    if word in anagram_map:
+      count *= anagram_map[word]
+  res.append(count)
+print(res)
+
+----------------------------------------------------------------------
+
+
+
+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

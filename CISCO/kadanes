@@ -1,0 +1,12 @@
+arr = [2,-8, 3,-2, 4,-10]
+
+loc_max = 0
+global_max = float('-inf')
+
+for i in range(len(arr)):
+  loc_max = max(arr[i],arr[i]+loc_max)
+  
+  if(loc_max>global_max):
+    global_max = loc_max
+
+print(global_max)
