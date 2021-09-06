@@ -1,0 +1,36 @@
+space = [8,4,2,5,3]
+x = 1
+s = 0
+e = x
+arr = []
+while(e!=len(space)+1):
+  print(s,e,min(space[s:e]))
+  arr.append(min(space[s:e]))
+  s += 1
+  e += 1
+print(max(arr))
+
+
+##############################################################
+
+
+from queue import deque
+def getMin( space, x ):
+    q = deque([])
+    n = len(space)
+    result = []
+    
+    for i in range(n):
+        val = space[i]
+        while len(q) > 0 and i >= q[0][0]:
+            q.popleft()
+        
+        while len(q) > 0 and q[len(q)-1][1] >= val:
+            q.pop()
+            
+        q.append( (i+x, val) )
+        result.append(q[0][1])
+    return max(result[x-1:])
+getMin(space, x)
+return max(result[[x-1:])
+

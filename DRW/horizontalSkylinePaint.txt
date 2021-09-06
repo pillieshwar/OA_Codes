@@ -1,0 +1,9 @@
+prev, ans = A[0], 0
+m = prev
+for i in A[1:]:
+  if(prev<i):
+    ans += i-prev
+  if(m>i): m = i
+  prev = i
+print(m+ans)
+

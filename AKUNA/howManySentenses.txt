@@ -1,6 +1,3 @@
-How Many Sentenses?
-----------------------------------------------------------------------
-
 from collections import Counter
 
 wordSet = ["listen", "it", "is", "silent"]
@@ -17,8 +14,3 @@ for sen in sentence:
   res.append(count)
 print(res)
 
-----------------------------------------------------------------------
-
-
-
-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

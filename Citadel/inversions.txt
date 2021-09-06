@@ -1,0 +1,23 @@
+arr = [5,4,3,2,1]
+arr = set(arr)
+n = len(arr)
+arr = sorted(arr, reverse=True)
+
+def backtrack(temp, start, end):
+  if(len(temp)==3):
+    ans.append(temp[:])
+  else:
+    for i in range(start, end):
+      if(visited[i] or start>i):
+        continue
+      temp.append(arr[i])
+      visited[i] = True
+      backtrack(temp, i+1, end)
+      temp.pop()
+      visited[i] = False
+
+
+ans = []
+visited = [False]*n
+backtrack([], 0, n)
+print(ans)

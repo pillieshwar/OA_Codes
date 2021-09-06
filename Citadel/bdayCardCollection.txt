@@ -1,0 +1,14 @@
+from collections import Counter
+A = [4,6,12,8]
+n= len(A)
+d = 14
+m = max(A)
+m = max(m,d+1)
+dic = Counter(A)
+for i in range(1,m):
+  if(i not in dic and i<=d):
+    print(i)
+    d -= i
+    
+    
+

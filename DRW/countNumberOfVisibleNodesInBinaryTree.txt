@@ -1,18 +1,3 @@
-Horizontal Skyline Paint:
----------------------------------
-prev, ans = A[0], 0
-m = prev
-for i in A[1:]:
-  if(prev<i):
-    ans += i-prev
-  if(m>i): m = i
-  prev = i
-print(m+ans)
-
----------------------------------
-
-# Count the number of visible nodes in binary tree
-
 class newNode:
   def __init__(self, data):
     self.data = data
