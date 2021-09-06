@@ -1,0 +1,26 @@
+# Consecutive Sum
+
+num = 10
+
+s=0
+e=1
+temp, count = 0, 0
+while(e<num):
+  if(temp<num):
+    temp += e
+    e += 1
+  if(temp>num):
+    temp-=s
+    s += 1
+  if(temp==num):
+    arr = [i for i in range(s,e)]
+    print(arr)
+    count += 1
+    temp -= s
+    s += 1
+    temp += e
+    e += 1
+    
+print(count)
+
+###################################################################
